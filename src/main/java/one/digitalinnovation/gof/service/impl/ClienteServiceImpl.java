@@ -47,6 +47,11 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override
+	public Iterable<Cliente> buscarPorNome(String nome) {
+		return clienteRepository.findByNome(nome);
+	}
+
+	@Override
 	public void inserir(Cliente cliente) {
 		salvarClienteComCep(cliente);
 	}

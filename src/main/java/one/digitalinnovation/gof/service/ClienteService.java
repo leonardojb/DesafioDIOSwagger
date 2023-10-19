@@ -13,6 +13,8 @@ public interface ClienteService {
 
 	Iterable<Cliente> buscarTodos();
 
+	Iterable<Cliente> buscarPorNome(String nome);
+
 	Cliente buscarPorId(Long id);
 
 	void inserir(Cliente cliente);

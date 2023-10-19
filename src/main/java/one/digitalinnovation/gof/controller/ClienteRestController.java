@@ -38,6 +38,11 @@ public class ClienteRestController {
 		return ResponseEntity.ok(clienteService.buscarPorId(id));
 	}
 
+	@GetMapping("/por-nome/{nome}")
+	public ResponseEntity<Iterable<Cliente>> buscarPorNome(@PathVariable String nome) {
+		return ResponseEntity.ok(clienteService.buscarPorNome(nome));
+	}
+
 	@PostMapping
 	public ResponseEntity<Cliente> inserir(@RequestBody Cliente cliente) {
 		clienteService.inserir(cliente);
